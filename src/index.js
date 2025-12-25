@@ -1,4 +1,11 @@
-import {generteJoke} from './generateJoke';
+import generateJoke from './generateJoke';
+import './styles/main.scss';
+import laughing from './assets/school.svg';
 
-const joke = generteJoke();
-console.log(joke);
+const img = document.getElementById("laughImg");
+img.src = laughing;
+
+const jokeBtn = document.getElementById("jokeBtn");
+jokeBtn.addEventListener("click", generateJoke);
+
+generateJoke(); 
